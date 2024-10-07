@@ -18,6 +18,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
         if (state is SignInSuccess) {
+          //add user data to shared preferences and navigate to home
           buildErrorBar(context, "Successfully logged in");
           Navigator.pushReplacementNamed(context, Homeview.routeName);
         }

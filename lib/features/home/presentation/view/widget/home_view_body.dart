@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:fruits_hub/core/helper_functions/get_user.dart';
 import 'package:fruits_hub/core/helper_functions/is_arbic.dart';
 import 'package:fruits_hub/core/widgets/custom_search_text_field.dart';
 import 'package:fruits_hub/features/home/presentation/view/widget/best_selling_grid_view.dart';
@@ -30,7 +31,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 UserProfileCard(
                   imageUrl: 'assets/images/profile_image.png',
                   title: isArabic() ? 'مرحبا بك' : "Welcome ",
-                  username: isArabic() ? "احمد ناصر" : "Ahmed Nasr",
+                  username:getUser().name ,
                 ),
                 const SizedBox(
                   height: 16,

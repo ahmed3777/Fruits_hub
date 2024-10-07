@@ -20,5 +20,19 @@ class UserModel extends UserEntity {
     );
   }
 
- 
+  factory UserModel.fromEntity(UserEntity user) {
+    return UserModel(
+      name: user.name,
+      email: user.email,
+      uId: user.uId,
+    );
+  }
+  
+  toMap() {
+    return {
+      'email': email,
+      'uId': uId,
+      'name': name,
+    };
+  }
 }
